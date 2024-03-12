@@ -11,7 +11,6 @@ import {
 import { Button } from '@/app/ui/button';
 import { createInvoice } from '@/app/lib/actions';
 import { useFormState } from 'react-dom';
-import { error } from 'console';
 
 export default function Form({
   customers,
@@ -51,9 +50,7 @@ export default function Form({
           <div id="customer-error" aria-live='polite' aria-atomic='true'>
             {state.errors?.customerId &&
               state.errors.customerId.map((error: string) => (
-                <p className="mt-2 text-sm text-red-500" key={error}>
-                  {error}
-                </p>
+                <p className="mt-2 text-sm text-red-500" key={error}>{error}</p>
               ))
             }
           </div>
@@ -80,9 +77,7 @@ export default function Form({
             <div id="amount-error" aria-live="polite" aria-atomic="true">
               {state.errors?.amount &&
                 state.errors.amount.map((error: string) => (
-                  <p className="mt-2 text-sm text-red-500" key={error}>
-                    {error}
-                  </p>
+                  <p className="mt-2 text-sm text-red-500" key={error}>{error}</p>
                 ))
               }
             </div>
@@ -132,9 +127,7 @@ export default function Form({
           <div id="status-error" aria-live="polite" aria-atomic="true">
             {state.errors?.status &&
               state.errors.status.map((error: string) => (
-                <p className="mt-2 text-sm text-red-500" key={error}>
-                  {error}
-                </p>
+                <p className="mt-2 text-sm text-red-500" key={error}>{error}</p>
               ))
             }
           </div>
@@ -142,9 +135,7 @@ export default function Form({
 
         <div id="status-error" aria-live="polite" aria-atomic="true">
           {state.errors && (
-            <p className="mt-2 text-sm text-red-500" key={state.message}>
-              {state.message}
-            </p>
+            <p className="mt-2 text-sm text-red-500" key={state.message}>{state.message}</p>
           )}
         </div>
       </div>
